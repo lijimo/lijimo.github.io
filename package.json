@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://lijimo.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "npm run build && git subtree push --prefix build origin main",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
